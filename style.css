@@ -521,3 +521,49 @@ body {
   background: #f7f9fc;
   flex: 1;
 }
+
+/* DASHBOARD STATS */
+
+.dashboard-cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+  margin-top: 30px;
+}
+
+/* CARD */
+
+.stat-card {
+  background: white;
+
+  padding: 25px;
+
+  border-radius: 16px;
+
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+
+  transition: 0.3s;
+}
+
+.stat-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+.stat-title {
+  font-size: 14px;
+  color: #6b7280;
+}
+
+.stat-value {
+  margin-top: 10px;
+  font-size: 36px;
+  font-weight: 700;
+  color: #111827;
+}
+
+.stat-desc {
+  margin-top: 6px;
+  font-size: 13px;
+  color: #9ca3af;
+}
