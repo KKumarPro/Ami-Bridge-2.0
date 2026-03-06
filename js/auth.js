@@ -1,47 +1,36 @@
-function selectRole(button) {
-  const roles = document.querySelectorAll(".role");
+import { login, register } from "./api.js";
+import { requireAuth } from "./utils.js";
 
-  roles.forEach((role) => {
-    role.classList.remove("active");
-  });
+requireAuth();
 
-  button.classList.add("active");
-}
+const signinBtn = document.querySelector("#signin-btn");
+const signupBtn = document.querySelector("#signup-btn");
 
-/* SHOW SIGNUP */
+signinBtn?.addEventListener("click", async () => {
+  const email = document.querySelector("#signin-email").value;
+  const password = document.querySelector("#signin-password").value;
+  const role = document.querySelector(".role.active").innerText;
 
-function showSignup() {
-  document.getElementById("signin-form").style.display = "none";
-  document.getElementById("signup-form").style.display = "block";
+  const result = await login(email, password, role);
 
-  document.getElementById("form-title").innerText =
-    "Create your Ami-Bridge account";
-}
-
-/* SHOW SIGNIN */
-
-function showSignin() {
-  document.getElementById("signup-form").style.display = "none";
-  document.getElementById("signin-form").style.display = "block";
-
-  document.getElementById("form-title").innerText =
-    "Choose your role and sign in";
-}
-
-/* REDIRECT AFTER LOGIN */
-
-function goToDashboard() {
-  const activeRole = document.querySelector(".role.active").innerText;
-
-  if (activeRole === "Student") {
+  if (result.success) {
     window.location.href = "student-dashboard.html";
+  } else {
+    alert("Invalid credentials");
   }
+});
 
-  if (activeRole === "Mentor") {
-    window.location.href = "mentor-dashboard.html";
-  }
+signupBtn?.addEventListener("click", async () => {
+  const name = document.querySelector("#signup-name").value;
+  const email = document.querySelector("#signup-email").value;
+  const password = document.querySelector("#signup-password").value;
+  const role = document.querySelector(".role.active").innerText;
 
-  if (activeRole === "Admin") {
-    window.location.href = "admin-dashboard.html";
+  const result = await register(name, email, password, role);
+
+  if (result.success) {
+    window.location.href = "student-dashboard.html";
+  } else {
+    alert(result.message);
   }
-}
+});

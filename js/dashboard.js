@@ -1,35 +1,31 @@
-const ctx = document.getElementById("performanceChart");
+import { getProfile, getAttempts } from "./api.js";
+import { requireAuth } from "./utils.js";
 
-new Chart(ctx, {
-  type: "line",
+requireAuth();
 
-  data: {
-    labels: ["Attempt 1", "Attempt 2", "Attempt 3", "Attempt 4", "Attempt 5"],
+async function loadDashboard() {
+  const profile = await getProfile();
 
-    datasets: [
-      {
-        label: "Coding Score",
-        data: [60, 65, 72, 80, 85],
-        borderWidth: 3,
-        tension: 0.3,
-      },
+  document.querySelector(".user-name").innerText = profile.name;
 
-      {
-        label: "Mock Interview Score",
-        data: [55, 60, 68, 74, 78],
-        borderWidth: 3,
-        tension: 0.3,
-      },
-    ],
-  },
+  document.querySelector(".stat-value").innerText = profile.prScore;
 
-  options: {
-    responsive: true,
+  const attempts = await getAttempts();
 
-    plugins: {
-      legend: {
-        position: "top",
-      },
-    },
-  },
-});
+  const table = document.querySelector(".attempts-table tbody");
+
+  table.innerHTML = "";
+
+  attempts.forEach((a) => {
+    table.innerHTML += `
+<tr>
+<td>${a.company}</td>
+<td>${a.date}</td>
+<td>${a.score}</td>
+<td>${a.status}</td>
+</tr>
+`;
+  });
+}
+
+loadDashboard();
