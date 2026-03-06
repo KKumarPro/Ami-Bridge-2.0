@@ -746,3 +746,316 @@ body {
 .submit-interview:hover {
   background: #4756e6;
 }
+
+/* RESULT GRID */
+
+.result-grid {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 25px;
+
+  margin-top: 30px;
+}
+
+/* RESULT CARD */
+
+.result-card {
+  background: white;
+  padding: 25px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  text-align: center;
+}
+
+.result-title {
+  font-size: 14px;
+  color: #6b7280;
+}
+
+.result-value {
+  font-size: 36px;
+  margin-top: 10px;
+  font-weight: 700;
+}
+
+/* FEEDBACK SECTION */
+
+.feedback-section {
+  margin-top: 40px;
+}
+
+.feedback-card {
+  background: white;
+  padding: 25px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  margin-top: 20px;
+}
+
+.feedback-title {
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.feedback-card ul {
+  padding-left: 18px;
+  color: #374151;
+}
+
+/* RESUME UPLOAD CARD */
+
+.resume-upload-card {
+  background: white;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  margin-top: 20px;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+/* FILE INPUT */
+
+.resume-input {
+  font-size: 14px;
+}
+
+/* UPLOAD BUTTON */
+
+.upload-btn {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 10px;
+  background: #5b6cff;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.upload-btn:hover {
+  background: #4756e6;
+}
+
+/* RESUME SCORE */
+
+.resume-score-section {
+  margin-top: 40px;
+}
+
+.resume-score-card {
+  background: white;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  text-align: center;
+}
+
+.resume-score {
+  font-size: 40px;
+  font-weight: 700;
+}
+
+.resume-desc {
+  margin-top: 6px;
+  color: #6b7280;
+}
+
+/* FEEDBACK */
+
+.resume-feedback {
+  margin-top: 40px;
+  background: white;
+  padding: 25px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+}
+
+.resume-feedback ul {
+  padding-left: 18px;
+  color: #374151;
+}
+
+/* VIEW BUTTON */
+
+.view-btn {
+  padding: 8px 14px;
+  border: none;
+  border-radius: 8px;
+  background: #5b6cff;
+  color: white;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.view-btn:hover {
+  background: #4756e6;
+}
+
+/* FEEDBACK LIST */
+
+.feedback-list {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+/* FEEDBACK CARD */
+
+.mentor-feedback-card {
+  background: white;
+  padding: 25px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+}
+
+/* MENTOR INFO */
+
+.mentor-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.mentor-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #5b6cff;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+/* ROLE */
+
+.mentor-role {
+  font-size: 13px;
+  color: #6b7280;
+}
+
+/* ATTEMPT */
+
+.reviewed-attempt {
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+/* RATING */
+
+.mentor-rating {
+  margin-top: 6px;
+  color: #f59e0b;
+}
+
+/* COMMENTS */
+
+.mentor-comments {
+  margin-top: 15px;
+  color: #374151;
+}
+
+.mentor-comments ul {
+  padding-left: 18px;
+}
+
+/* PROFILE CARD */
+
+.profile-card {
+  background: white;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  margin-top: 20px;
+}
+
+/* AVATAR */
+
+.profile-avatar-circle {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: #5b6cff;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+/* PROFILE DETAILS */
+
+.profile-details {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.profile-details input {
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #e5e7eb;
+}
+
+/* PASSWORD CARD */
+
+.password-card {
+  background: white;
+  padding: 25px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.password-card input {
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #e5e7eb;
+}
+
+/* UPDATE BUTTON */
+
+.update-btn {
+  margin-top: 10px;
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  background: #5b6cff;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.update-btn:hover {
+  background: #4756e6;
+}
+
+/* PRS CARD */
+
+.profile-prs-card {
+  background: white;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  margin-top: 20px;
+}
+
+.profile-prs-card h2 {
+  font-size: 40px;
+  font-weight: 700;
+}

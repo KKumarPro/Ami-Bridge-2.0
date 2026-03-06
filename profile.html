@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Profile - Ami Bridge</title>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="dashboard">
+      <!-- SIDEBAR -->
+
+      <aside class="sidebar">
+        <div class="sidebar-logo">
+          <div class="logo-box">AB</div>
+          <span>Ami-Bridge</span>
+        </div>
+
+        <nav class="sidebar-menu">
+          <a class="menu-item" href="student-dashboard.html">Dashboard</a>
+          <a class="menu-item" href="practice.html">Practice Interviews</a>
+          <a class="menu-item" href="attempts.html">My Attempts</a>
+          <a class="menu-item" href="feedback.html">Mentor Feedback</a>
+          <a class="menu-item" href="resume.html">Resume</a>
+          <a class="menu-item active">Profile</a>
+        </nav>
+      </aside>
+
+      <!-- MAIN AREA -->
+
+      <div class="main-area">
+        <header class="topbar">
+          <h2>My Profile</h2>
+
+          <div class="topbar-user">
+            <span class="user-name">Karan</span>
+
+            <div class="user-avatar">K</div>
+          </div>
+        </header>
+
+        <main class="content">
+          <h3>Account Information</h3>
+
+          <div class="profile-card">
+            <div class="profile-avatar">
+              <div class="profile-avatar-circle">K</div>
+            </div>
+
+            <div class="profile-details">
+              <label>Full Name</label>
+              <input type="text" value="Karan Kumar" />
+
+              <label>Email</label>
+              <input type="email" value="karan@email.com" />
+
+              <label>Role</label>
+              <input type="text" value="Student" disabled />
+
+              <button class="update-btn">Update Profile</button>
+            </div>
+          </div>
+
+          <h3 class="section-title">Change Password</h3>
+
+          <div class="password-card">
+            <label>Current Password</label>
+            <input type="password" />
+
+            <label>New Password</label>
+            <input type="password" />
+
+            <label>Confirm Password</label>
+            <input type="password" />
+
+            <button class="update-btn">Update Password</button>
+          </div>
+
+          <h3 class="section-title">Placement Readiness Score</h3>
+
+          <div class="profile-prs-card">
+            <h2>78</h2>
+
+            <p>Your current PRS score</p>
+          </div>
+        </main>
+      </div>
+    </div>
+  </body>
+</html>

@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Student Dashboard - Ami Bridge</title>
+    <title>My Attempts - Ami Bridge</title>
 
     <link rel="stylesheet" href="style.css" />
   </head>
@@ -22,8 +22,8 @@
         <nav class="sidebar-menu">
           <a class="menu-item" href="student-dashboard.html">Dashboard</a>
           <a class="menu-item" href="practice.html">Practice Interviews</a>
-          <a class="menu-item" href="attempts.html">My Attempts</a>
-          <a class="menu-item" href="feedback.html">Mentor Feedback</a>
+          <a class="menu-item active">My Attempts</a>
+          <a class="menu-item" href="#">Mentor Feedback</a>
           <a class="menu-item" href="resume.html">Resume</a>
           <a class="menu-item" href="#">Profile</a>
         </nav>
@@ -32,10 +32,8 @@
       <!-- MAIN AREA -->
 
       <div class="main-area">
-        <!-- TOP NAVBAR -->
-
         <header class="topbar">
-          <h2>Student Dashboard</h2>
+          <h2>My Interview Attempts</h2>
 
           <div class="topbar-user">
             <span class="user-name">Karan</span>
@@ -44,50 +42,10 @@
           </div>
         </header>
 
-        <!-- CONTENT -->
-
         <main class="content">
-          <h3>Welcome back 👋</h3>
+          <h3>All Interview Attempts</h3>
 
-          <div class="dashboard-cards">
-            <div class="stat-card">
-              <p class="stat-title">Placement Readiness Score</p>
-
-              <h2 class="stat-value">78</h2>
-
-              <p class="stat-desc">Overall readiness score</p>
-            </div>
-
-            <div class="stat-card">
-              <p class="stat-title">Coding Score</p>
-
-              <h2 class="stat-value">82</h2>
-
-              <p class="stat-desc">Based on coding attempts</p>
-            </div>
-
-            <div class="stat-card">
-              <p class="stat-title">Mock Interview</p>
-
-              <h2 class="stat-value">74</h2>
-
-              <p class="stat-desc">Interview performance</p>
-            </div>
-
-            <div class="stat-card">
-              <p class="stat-title">Resume Score</p>
-
-              <h2 class="stat-value">70</h2>
-
-              <p class="stat-desc">Admin evaluated score</p>
-            </div>
-          </div>
-
-          <!-- RECENT ATTEMPTS -->
-
-          <div class="attempts-section">
-            <h3 class="section-title">Recent Interview Attempts</h3>
-
+          <div class="attempts-page">
             <table class="attempts-table">
               <thead>
                 <tr>
@@ -95,6 +53,7 @@
                   <th>Date</th>
                   <th>Score</th>
                   <th>Status</th>
+                  <th>Details</th>
                 </tr>
               </thead>
 
@@ -104,6 +63,14 @@
                   <td>12 Mar 2026</td>
                   <td>85</td>
                   <td class="status pass">Pass</td>
+                  <td>
+                    <button
+                      class="view-btn"
+                      onclick="window.location.href = 'result.html'"
+                    >
+                      View
+                    </button>
+                  </td>
                 </tr>
 
                 <tr>
@@ -111,6 +78,14 @@
                   <td>10 Mar 2026</td>
                   <td>72</td>
                   <td class="status pass">Pass</td>
+                  <td>
+                    <button
+                      class="view-btn"
+                      onclick="window.location.href = 'result.html'"
+                    >
+                      View
+                    </button>
+                  </td>
                 </tr>
 
                 <tr>
@@ -118,6 +93,14 @@
                   <td>8 Mar 2026</td>
                   <td>58</td>
                   <td class="status fail">Fail</td>
+                  <td>
+                    <button
+                      class="view-btn"
+                      onclick="window.location.href = 'result.html'"
+                    >
+                      View
+                    </button>
+                  </td>
                 </tr>
 
                 <tr>
@@ -125,21 +108,20 @@
                   <td>5 Mar 2026</td>
                   <td>76</td>
                   <td class="status pass">Pass</td>
+                  <td>
+                    <button
+                      class="view-btn"
+                      onclick="window.location.href = 'result.html'"
+                    >
+                      View
+                    </button>
+                  </td>
                 </tr>
               </tbody>
             </table>
-
-            <!-- PERFORMANCE CHART -->
-
-            <div class="chart-section">
-              <h3 class="section-title">Performance Trend</h3>
-              <canvas id="performanceChart"></canvas>
-            </div>
           </div>
         </main>
       </div>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="dashboard.js"></script>
   </body>
 </html>
