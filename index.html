@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Ami-Bridge</title>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!-- NAVBAR -->
+
+    <header class="navbar">
+      <div class="logo">
+        <div class="logo-box">AB</div>
+
+        <span>Ami-Bridge</span>
+      </div>
+
+      <div class="nav-actions">
+        <a href="auth.html">Sign In</a>
+
+        <button class="get-btn" onclick="window.location.href = 'auth.html'">
+          Get Started
+        </button>
+      </div>
+    </header>
+
+    <!-- HERO -->
+
+    <section class="hero reveal">
+      <h1>
+        Master your tech career <br />
+
+        with <span>Ami-Bridge</span>
+      </h1>
+
+      <p>
+        The complete platform for students to practice interviews, receive
+        mentor feedback, and track their Placement Readiness Score (PRS).
+      </p>
+
+      <button class="cta" onclick="window.location.href = 'auth.html'">
+        Start Practicing <span class="arrow">→</span>
+      </button>
+    </section>
+
+    <!-- FEATURES -->
+
+    <section class="features reveal">
+      <div class="card">
+        <div class="icon icon1"></div>
+
+        <h3>Track PRS Score</h3>
+
+        <p>
+          Your Placement Readiness Score gives you a clear metric on how
+          prepared you are for top tech companies.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="icon icon2"></div>
+
+        <h3>Mock Interviews</h3>
+
+        <p>
+          Practice company-specific interview questions and get scored
+          automatically to improve your skills.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="icon icon3"></div>
+
+        <h3>Mentor Feedback</h3>
+
+        <p>
+          Get assigned to industry mentors who review your performance and
+          provide actionable insights.
+        </p>
+      </div>
+    </section>
+
+    <!-- SCROLL ANIMATION SCRIPT -->
+
+    <script>
+      function reveal() {
+        var reveals = document.querySelectorAll(".reveal");
+
+        for (var i = 0; i < reveals.length; i++) {
+          var windowHeight = window.innerHeight;
+
+          var elementTop = reveals[i].getBoundingClientRect().top;
+
+          var visible = 150;
+
+          if (elementTop < windowHeight - visible) {
+            reveals[i].classList.add("active");
+          }
+        }
+      }
+
+      window.addEventListener("scroll", reveal);
+    </script>
+  </body>
+</html>
