@@ -28,11 +28,9 @@
           <p class="role-title">SIGN IN AS</p>
 
           <div class="role-selector">
-            <button class="role active" onclick="selectRole(this)">
-              Student
-            </button>
-            <button class="role" onclick="selectRole(this)">Mentor</button>
-            <button class="role" onclick="selectRole(this)">Admin</button>
+            <button class="role active">Student</button>
+            <button class="role">Mentor</button>
+            <button class="role">Admin</button>
           </div>
           <label>Email</label>
           <input type="email" placeholder="Enter your email" />
@@ -44,7 +42,7 @@
 
           <p class="signin-text">
             Don't have an account?
-            <a href="#" onclick="showSignup()">Create account</a>
+            <a href="#" id="show-signup">Create account</a>
           </p>
         </div>
 
@@ -78,7 +76,7 @@
 
           <p class="signin-text">
             Already have an account?
-            <a href="#" onclick="showSignin()">Sign In</a>
+            <a href="#" id="show-signin">Sign In</a>
           </p>
         </div>
       </div>
