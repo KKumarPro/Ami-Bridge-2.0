@@ -1,7 +1,5 @@
 import { login, register } from "./api.js";
-import { requireAuth } from "./utils.js";
-
-requireAuth();
+import { setToken } from "./utils.js";
 
 const signinBtn = document.querySelector("#signin-btn");
 const signupBtn = document.querySelector("#signup-btn");
@@ -14,9 +12,11 @@ signinBtn?.addEventListener("click", async () => {
   const result = await login(email, password, role);
 
   if (result.success) {
+    setToken(result.token);
+
     window.location.href = "student-dashboard.html";
   } else {
-    alert("Invalid credentials");
+    alert("Invalid login credentials");
   }
 });
 
@@ -29,6 +29,8 @@ signupBtn?.addEventListener("click", async () => {
   const result = await register(name, email, password, role);
 
   if (result.success) {
+    setToken(result.token);
+
     window.location.href = "student-dashboard.html";
   } else {
     alert(result.message);

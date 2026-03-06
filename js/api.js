@@ -1,7 +1,5 @@
 const API_BASE = "http://localhost:5000/api";
 
-/* GENERIC REQUEST */
-
 async function apiRequest(endpoint, method = "GET", data = null) {
   const options = {
     method,
@@ -23,17 +21,30 @@ async function apiRequest(endpoint, method = "GET", data = null) {
 /* AUTH */
 
 export async function login(email, password, role) {
-  return apiRequest("/auth/login", "POST", { email, password, role });
+  return apiRequest("/auth/login", "POST", {
+    email,
+    password,
+    role,
+  });
 }
 
 export async function register(name, email, password, role) {
-  return apiRequest("/auth/register", "POST", { name, email, password, role });
+  return apiRequest("/auth/register", "POST", {
+    name,
+    email,
+    password,
+    role,
+  });
 }
 
 /* PROFILE */
 
 export async function getProfile() {
   return apiRequest("/student/profile");
+}
+
+export async function updateProfile(data) {
+  return apiRequest("/student/profile", "PUT", data);
 }
 
 /* ATTEMPTS */
@@ -44,4 +55,22 @@ export async function getAttempts() {
 
 export async function submitAttempt(data) {
   return apiRequest("/student/attempt", "POST", data);
+}
+
+/* QUESTIONS */
+
+export async function getQuestions(company) {
+  return apiRequest(`/questions/${company}`);
+}
+
+/* RESUME */
+
+export async function uploadResume(data) {
+  return apiRequest("/student/resume", "POST", data);
+}
+
+/* FEEDBACK */
+
+export async function getFeedback() {
+  return apiRequest("/student/feedback");
 }

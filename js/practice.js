@@ -1,25 +1,13 @@
-import { submitAttempt } from "./api.js";
 import { requireAuth } from "./utils.js";
 
 requireAuth();
 
-const submitBtn = document.querySelector(".submit-interview");
+document.querySelectorAll(".start-btn").forEach((button) => {
+  button.addEventListener("click", () => {
+    const company = button.dataset.company;
 
-submitBtn?.addEventListener("click", async () => {
-  const answers = [];
+    localStorage.setItem("currentCompany", company);
 
-  document.querySelectorAll(".answer-box").forEach((a) => {
-    answers.push(a.value);
+    window.location.href = "interview.html";
   });
-
-  const result = await submitAttempt({
-    company: "Google",
-    answers,
-  });
-
-  if (result.success) {
-    window.location.href = "result.html";
-  } else {
-    alert("Submission failed");
-  }
 });
