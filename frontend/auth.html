@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Sign In/Up - Ami Bridge</title>
+
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body class="auth-body">
+    <a href="index.html" class="back-home">← Back</a>
+
+    <div class="auth-wrapper">
+      <div class="logo-auth">
+        <div class="logo-box">AB</div>
+      </div>
+
+      <h2>Welcome to Ami-Bridge</h2>
+
+      <div class="auth-card">
+        <!-- SIGN IN FORM -->
+
+        <div id="signin-form">
+          <p class="subtitle" id="form-title">Choose your role and sign in</p>
+
+          <p class="role-title">SIGN IN AS</p>
+
+          <div class="role-selector">
+            <button class="role active">Student</button>
+            <button class="role">Mentor</button>
+            <button class="role">Admin</button>
+          </div>
+          <label>Email</label>
+          <input
+            id="signin-email"
+            type="email"
+            placeholder="Enter your email"
+          />
+
+          <label>Password</label>
+          <input
+            id="signin-password"
+            type="password"
+            placeholder="Enter your password"
+          />
+
+          <button id="signin-btn" class="signup-btn">Sign In</button>
+
+          <p class="signin-text">
+            Don't have an account?
+            <a href="#" id="show-signup">Create account</a>
+          </p>
+        </div>
+
+        <!-- SIGN UP FORM -->
+
+        <div id="signup-form" style="display: none">
+          <p class="subtitle" id="form-title">Choose your role and sign up</p>
+
+          <p class="role-title">SIGN UP AS</p>
+
+          <div class="role-selector">
+            <button class="role active" onclick="selectRole(this)">
+              Student
+            </button>
+            <button class="role" onclick="selectRole(this)">Mentor</button>
+            <button class="role" onclick="selectRole(this)">Admin</button>
+          </div>
+
+          <label>Full Name</label>
+          <input id="signup-name" type="text" placeholder="Full name" />
+
+          <label>Email</label>
+          <input
+            id="signup-email"
+            type="email"
+            placeholder="Enter your email"
+          />
+
+          <label>Password</label>
+          <input
+            id="signup-password"
+            type="password"
+            placeholder="Create password"
+          />
+
+          <button id="signup-btn" class="signup-btn">Create Account</button>
+
+          <p class="signin-text">
+            Already have an account?
+            <a href="#" id="show-signin">Sign In</a>
+          </p>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="js/auth.js"></script>
+  </body>
+</html>
